@@ -1,0 +1,48 @@
+--------------------------------------TITLE--------------------------------------
+
+How n8n works
+
+--------------------------------------CONTENT--------------------------------------
+
+n8n is a modern, open-source workflow automation tool that enables users to connect apps, APIs, and
+services through a visual, node-based interface.
+
+Key concepts:
+
+1. ** Nodes :**
+- Each node represents a task, such as triggering a workflow, making an API request, transforming
+data, or sending an email.
+- Nodes can be native integrations (like Facebook, Twitter, HTTP Request, Email) or custom JavaSc
+ript code.
+
+2. ** Workflow :**
+- A workflow is a directed graph of nodes, defining the sequence and logic of automation.
+- Workflows are triggered by events like schedules, webhooks, or manual execution.
+
+3. ** Data Passing :**
+- Nodes receive input data from previous nodes, process it, and pass output data downstream.
+- Data is structured as JSON objects and arrays, allowing complex transformations.
+
+4. ** Credentials :**
+- API keys, OAuth tokens, and other secrets are managed securely via n8n's credential system and
+are referenced by nodes without exposing them in the workflow JSON.
+
+5. ** Error Handling :**
+- Nodes can have error workflows attached to handle failures gracefully.
+- Errors can trigger alerts, retries, or conditional logic.
+
+6. ** Extensibility :**
+- Users can create custom nodes or execute arbitrary JavaScript within workflows.
+- Supports integrations with REST APIs via HTTP Request nodes.
+
+7. ** Import/Export :**
+- Workflows are saved as JSON and can be exported or imported between n8n instances for sharing o
+r backup.
+
+8. ** Execution :**
+- Workflows can run synchronously or asynchronously, supporting complex branching, loops, and con
+ditional execution.
+
+The latest version supports robust API integrations, dynamic credential management, and advanced wor
+kflow scheduling, making it ideal for building multi-step automated processes like social media anal
+ytics aggregation and report delivery.

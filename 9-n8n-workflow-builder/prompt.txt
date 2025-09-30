@@ -1,0 +1,11 @@
+Please generate the JSON code for an n8n workflow that automates the weekly
+collection of social media analytics from Facebook, Twitter, and Linkedln. The
+workflow should:
+- Trigger every Monday at 8:00 AM.
+- Fetch analytics data for the previous week from each platform.
+- Calculate engagement rate, reach, and impressions.
+- Aggregate all data into a summary report.
+- Send the summary report via email to a specified list.
+- Include error handling and modular node design.
+Provide the full workflow JSON for direct import into n8n.
+

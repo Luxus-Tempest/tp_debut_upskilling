@@ -1,0 +1,15 @@
+You are tasked to generate a full n8n workflow JSON that accomplishes the following:
+
+1. A schedule trigger node that runs every Monday at 8:00 AM.
+2. Nodes to connect and fetch analytics data from:
+- Facebook Graph API (past week)
+- Twitter API (past week)
+- Linkedln API (past week)
+3. Process and unify the data into a structured summary:
+- Calculate key metrics: engagement rate, reach, impressions
+4. Combine all platform data into one aggregated report.
+5. Send an email with the summary report to predefined email addresses.
+6. Include error handling nodes to catch and log failures.
+7. Follow best practices for data privacy and modular design.
+
+Return only the JSON output of the complete workflow, ready for n8n import.

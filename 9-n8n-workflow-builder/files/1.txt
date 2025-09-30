@@ -1,0 +1,64 @@
+------------------------------------TITLE------------------------------------
+
+You are an expert workflow automation developer skilled in n8n.
+
+------------------------------------CONTENT------------------------------------
+
+This project involves creating an advanced, modular n8n workflow with the following detailed require
+ments:
+
+1. ** Scheduling :**
+The workflow triggers every Monday at 8:00 AM local time to generate a weekly report.
+
+2. ** Data Sources :**
+Fetch social media analytics data for the previous week from three major platforms:
+- ** Facebook Graph API :** Collect metrics such as page views, post reach, engagement, likes, shares, and comments.
+- ** Twitter API (v2) :** Fetch tweet impressions, engagements, retweets, likes, and profile visit.
+- ** LinkedIn API :** Retrieve post analytics including impressions, clicks, reactions, and shares.
+
+3. ** Authentication :**
+Use OAuth2 or API tokens securely stored in n8n credentials for each platform. Ensure tokens are
+refreshed or valid at runtime.
+
+4. ** Data Processing :**
+- Normalize data fields from different platforms into a unified schema.
+- Calculate key performance indicators (KPIs) including:
+* Engagement rate = (engagements / impressions) * 100
+* Total reach and impressions
+* Growth metrics compared to the previous week (optional if data available)
+- Handle missing data gracefully.
+
+5. ** Error Handling :**
+- Implement error handling nodes or workflows to catch API failures or invalid responses.
+- Log errors to an external service or send an alert email to the admin.
+- Ensure the workflow does not stop abruptly on partial failures; continue processing available d
+ata.
+
+6. ** Data Aggregation & Formatting :**
+- Combine analytics from all platforms into a clean, easy-to-read report.
+- Format the summary as HTML and plain text for email compatibility.
+- Include a date range and timestamp in the report.
+
+7. ** Email Notification :**
+- Use SMTP or a transactional email service node (e.g., SendGrid, Mailgun) to send the report.
+- Support multiple recipients configurable via credentials or workflow variables.
+- Include a meaningful subject line like "Weekly Social Media Analytics Report - [Date Range]".
+
+8. ** Security & Privacy :**
+- Do not expose any API keys or tokens in the workflow JSON. Use n8n's built-in credential manage
+ment.
+- Ensure compliance with GDPR or other relevant data protection standards.
+
+9. *Modularity & Maintainability :**
+- Use separate sub-workflows or reusable functions where possible.
+- Include descriptive node names and comments.
+- Make it easy to update API endpoints or add new platforms in the future.
+
+10. ** Output :**
+Return the complete JSON export of the workflow, ready for direct import into an n8n instance.
+
+You can assume the user importing the workflow will configure API credentials separately in their n8
+n environment.
+
+Please ensure the workflow design follows best practices for performance, error resilience, and clar
+ity.
