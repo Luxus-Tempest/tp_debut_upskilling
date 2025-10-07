@@ -7,7 +7,7 @@ from utils import print_header, print_separator, get_user_input
 
 load_dotenv()
 # Read the PDF file and extract text from all pages
-pdf = PdfReader("1-agno-pdf/pwc-ai-analysis.pdf")
+pdf = PdfReader("pwc-ai-analysis.pdf")
 full_text = "".join(page.extract_text() or "" for page in pdf.pages)
 
 def always_return_full_pdf(agent, query, num_documents=None, ** kwargs):
