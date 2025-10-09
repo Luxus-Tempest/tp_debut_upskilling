@@ -1,0 +1,25 @@
+#Vérifie la connexion dans ton navigateur :
+
+
+# puis aller 👉 http://localhost:8080
+
+#Connecte-toi à Adminer avec :
+
+System: PostgreSQL
+Server: postgres
+Username: ai
+Password: ai
+Database: ai
+
+------------------------------------ Lancer docker 
+
+docker compose up -d
+
+------------------------------------ Vérifie que PostgreSQL est bien démarré :
+
+docker ps
+
+------------------------------------ Si tu veux t’assurer que tout est bien installé, exécute :
+
+docker exec -it agno_postgres psql -U ai -d ai -c "\dx"
+
